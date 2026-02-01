@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import heroBg from '../assets/webdev.svg';
-import Typical from 'react-typical';
+import Typewriter from 'typewriter-effect';
 import { contactLinks } from '../constants';
 import { ThemeContext } from '../themeProvider';
 import { motion } from 'framer-motion';
@@ -33,14 +33,14 @@ const Home = () => {
                 Hi, I am <br /> Himanshu Rajput
               </motion.span>
               <span className="block text-blue-500 z-0 lg:inline">
-                <Typical
-                  steps={[
-                    `Front End Developer`,
-                    1000,
-                    `Mern Stack Developer`,
-                    1000,
-                  ]}
-                  loop={Infinity}
+                <Typewriter
+                  options={{
+                    strings: ['Front End Developer', 'Mern Stack Developer'],
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    pauseFor: 1000
+                  }}
                 />
               </span>
             </h1>
