@@ -19,7 +19,7 @@ const Card = (props) => {
 
       className={`overflow-clip max-sm:w-80 w-96 flex flex-col bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700  card `}
     >
-      <a href={props.live} target="_blank">
+      <a href={props.live} target="_blank" rel="noreferrer">
         <iframe
           title={props.title}
           width='100%'
@@ -32,7 +32,7 @@ const Card = (props) => {
         ></iframe>
       </a>
       <div class={`${darkMode ? "" : "bg-black"} p-5 flex flex-col flex-1`}>
-        <a href={props.live} target="_blank" className="flex-1">
+        <a href={props.live} target="_blank" rel="noreferrer" className="flex-1">
           <h5 class={`${!darkMode && "text-white"} mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white`}>
             {props.name}
           </h5>
@@ -49,8 +49,8 @@ const Card = (props) => {
 
         </a>
         <div className="flex justify-between">
-          <button style={{ "box-shadow": "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" }} className={`${!darkMode && "border-white border-2 bg-slate-800"} px-3 py rounded-md`} ><a href={props.live} target="_blank">Go To Project</a></button>
-          <button style={{ "box-shadow": "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" }} className={`${!darkMode && "border-white border-2 bg-slate-800"} px-3 py rounded-md`}><a href={props.repo} target="_blank">Repo</a></button>
+          <button style={{ "box-shadow": "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" }} className={`${!darkMode && "border-white border-2 bg-slate-800"} px-3 py rounded-md`} ><a href={props.live} target="_blank" rel="noreferrer">Go To Project</a></button>
+          <button style={{ "box-shadow": "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" }} className={`${!darkMode && "border-white border-2 bg-slate-800"} px-3 py rounded-md`}><a href={props.repo} target="_blank" rel="noreferrer">Repo</a></button>
         </div>
       </div>
     </motion.div>
